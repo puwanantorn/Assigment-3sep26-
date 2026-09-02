@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  background: #f4ede1;
+  color: #2e2b26;
+}
+
+/* ---------- Header ---------- */
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 60px;
+  background: #f4ede1;
+  border-bottom: 1px solid rgb(149, 121, 121);
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  color: #2e2b26;
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.7), rgb(255, 255, 255, 0)),
+    url("https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?q=80&w=1600&auto=format&fit=crop");
+  background-position: center;
+  background-size: cover;
+  height: 420px;
+  display: flex;
+  align-items: center;
+  padding: 0 60px;
+  margin: 16px;
+  border-radius: 16px;
+}
+
+.hero-text {
+  max-width: 420px;
+}
+
+.eyebrow {
+  font-size: 0.9rem;
+  color: #6b6259;
+  margin-bottom: 6px;
+}
+
+.hero h1 {
+  font-size: 2.6rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.hero-desc {
+  font-size: 0.9rem;
+  color: #55504a;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.cta {
+  background: #2e2b26;
+  color: #fff;
+  border: none;
+  padding: 12px 26px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.cta:focus,
+.cta:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(46, 43, 38, 0.35);
+}
+
+hr {
+  background-color: rgb(149, 121, 121);
+  height: 1px;
+  border: 0;
+}
+
+/* ---------- Services ---------- */
+
+.services {
+  display: flex;
+  justify-content: space-around;
+  padding: 14px 60px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid rgb(149, 121, 121);
+}
+
+.services span {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #6b6259;
+}
+
+/* ---------- Gallery ---------- */
+
+.gallery {
+  display: flex;
+  gap: 16px;
+  margin: 0 16px 16px;
+}
+
+.gallery img {
+  flex: 1;
+  min-width: 0;
+  height: 340px;
+  object-fit: cover;
+  display: block;
+  border-radius: 16px;
+}
+
+/* ---------- Footer ---------- */
+
+footer {
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.footer-title {
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.footer-sub {
+  font-size: 0.8rem;
+  color: #6b6259;
+  margin-bottom: 12px;
+}
+
+.copyright {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #2e2b26;
+}
