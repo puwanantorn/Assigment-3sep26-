@@ -1,3 +1,5 @@
+/*Format ข้อความใน VS Code คีย์ลัด Shift + Alt + F*/
+
 * {
   margin: 0;
   padding: 0;
@@ -52,18 +54,26 @@ body {
   height: 420px;
   display: flex;
   align-items: center;
-  padding: 0 60px;
-  margin: 16px;
+  justify-content: left;
+  padding: 0 52px;
   border-radius: 16px;
+  margin: 1rem 1rem;
 }
 
 .hero-text {
   max-width: 420px;
 }
 
+.hero-text h1, .eyebrow {
+  text-shadow: 
+    -1px -1px 3px #D5B251,  /* เงาด้านบน-ซ้าย */
+     1px -1px 3px #D5B251,  /* เงาด้านบน-ขวา */
+    -1px  1px 3px #D5B251,  /* เงาด้านล่าง-ซ้าย */
+     1px  1px 3px #D5B251;  /* เงาด้านล่าง-ขวา */
+}
+
 .eyebrow {
-  font-size: 0.9rem;
-  color: #6b6259;
+  font-size: 1.25rem;
   margin-bottom: 6px;
 }
 
@@ -91,6 +101,7 @@ body {
   font-weight: 600;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
+  flex: auto;
 }
 
 .cta:focus,
@@ -126,14 +137,14 @@ hr {
 
 .gallery {
   display: flex;
-  gap: 16px;
+  gap: 8px;
   margin: 0 16px 16px;
 }
 
 .gallery img {
   flex: 1;
   min-width: 0;
-  height: 340px;
+  height: 300px;
   object-fit: cover;
   display: block;
   border-radius: 16px;
@@ -158,7 +169,84 @@ footer {
 }
 
 .copyright {
-  font-size: 0.75rem;
-  font-weight: 600;
+  font-weight: 600; /*ปรับความหนา*/
   color: #2e2b26;
+}
+
+.line{
+  width: 2.5em;
+  height: 4px;
+  background-color: black;
+  margin-bottom: 3px;
+}
+
+.hamburger{
+  display:none;
+}
+
+@media screen and (max-width:32em) {
+  .nav-links a{
+    display: none;
+  }
+  .site-header {
+    padding: 14px 20px;
+  }
+
+  main, footer {
+    min-width: 300px;
+  }
+
+  .hero {
+    min-width: 300px;
+    padding: 0 20px;
+    overflow: hidden;
+  }
+
+  .hero-text {
+    max-width: 100%;
+  }
+
+  .hero-desc{
+    font-size: 0.8rem;
+    text-align: left;
+    margin-right: 12rem;
+  }
+
+  .hero-text h1, .eyebrow {
+    text-shadow: 0 0;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .services span:nth-child(3) {
+    display: none;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .gallery img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  footer{
+    text-align: left;
+    font-size: smaller;
+  }
+
+  .copyright{
+    margin-left: -0.25rem;
+  }
+
+  .hamburger{
+    margin-top: 6px;
+    display: block;
+  }
 }
